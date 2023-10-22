@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 
 function ExperienceCV({ companyProject, role, description, location, date }) {
 
-  ExperienceCV.PropTypes = {
+  ExperienceCV.propTypes = {
     companyProject: PropTypes.string.isRequired,
     role: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    loaction: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
   };
   

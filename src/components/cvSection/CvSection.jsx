@@ -1,9 +1,14 @@
 import PersonalCV from "./cv/PersonalCV";
 import EducationCV from "./cv/EducationCV";
 import ExperienceCV from "./cv/ExperienceCV";
+import PropTypes from "prop-types";
 import "./../../styles/cvSection.css";
 
 function CvSection(info) {
+
+  CvSection.PropTypes = {
+    info: PropTypes.object.isRequired
+  }
   
   return(
     <div id="cvSection">

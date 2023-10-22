@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 
 function EducationCV({ schoolName, degree, location, date }) {
 
-  EducationCV.PropTypes = {
+  EducationCV.propTypes = {
     schoolName: PropTypes.string.isRequired,
     degree: PropTypes.string.isRequired,
-    loaction: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
   };
   

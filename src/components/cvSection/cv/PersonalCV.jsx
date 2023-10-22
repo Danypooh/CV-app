@@ -2,11 +2,11 @@ import PropTypes from "prop-types";
 
 function PersonalCV({ name, mail, tel, location, links }) {
 
-  PersonalCV.PropTypes = {
+  PersonalCV.propTypes = {
     name: PropTypes.string.isRequired,
     mail: PropTypes.string.isRequired,
     tel: PropTypes.string.isRequired,
-    loaction: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
     links: PropTypes.string.isRequired,
   };
   
