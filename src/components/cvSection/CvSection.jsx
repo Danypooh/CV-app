@@ -1,11 +1,32 @@
-import CV from "./cv/CV";
+import PersonalCV from "./cv/PersonalCV";
+import EducationCV from "./cv/EducationCV";
+import ExperienceCV from "./cv/ExperienceCV";
 import "./../../styles/cvSection.css";
 
-function CvSection() {
+function CvSection(info) {
   
   return(
     <div id="cvSection">
-        <CV/>
+      <PersonalCV 
+        name={info.personal.name}
+        mail={info.personal.mail}
+        tel={info.personal.tel}
+        location={info.personal.location}
+        links={info.personal.links}
+      />
+      <EducationCV
+        schoolName={info.education.schoolName}
+        degree={info.education.degree}
+        location={info.education.location}
+        date={info.education.date}
+      />
+      <ExperienceCV
+        companyProject={info.experience.companyProject}
+        role={info.experience.role}
+        location={info.experience.location}
+        date={info.experience.date}
+        description={info.experience.description}
+      />
     </div>
   )
 
