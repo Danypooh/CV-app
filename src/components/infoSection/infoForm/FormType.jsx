@@ -1,12 +1,13 @@
 import "./../../../styles/formType.css";
 import PropTypes from "prop-types";
 
-function FormType({ type, isOpen, onClick }) {
+function FormType({ type, isOpen, onClick, handleInfoChange }) {
   
   FormType.propTypes = {
     type: PropTypes.string.isRequired,
     isOpen: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
+    handleInfoChange: PropTypes.func.isRequired,
   };
   
   return (
@@ -15,12 +16,12 @@ function FormType({ type, isOpen, onClick }) {
     { (type === "Personal" && isOpen) &&
       <>        
         <form>
-          <input type="text" name="name" id="name" placeholder="Name"/>
-          <input type="text" name="city" id="city" placeholder="City"/>
-          <input type="text" name="state" id="state" placeholder="State" />
-          <input type="text" name="mail" id="mail" placeholder="E-mail"/>
-          <input type="text" name="linkedIn" id="linkedIn" placeholder="LinkedIn link"/>
-          <input type="text" name="otherLink" id="otherLink" placeholder="Any relevant links?"/>
+          <input type="text" name="name" id="name" placeholder="Name" onChange={handleInfoChange}/>
+          <input type="text" name="city" id="city" placeholder="City" onChange={handleInfoChange}/>
+          <input type="text" name="state" id="state" placeholder="State" onChange={handleInfoChange}/>
+          <input type="text" name="mail" id="mail" placeholder="E-mail" onChange={handleInfoChange}/>
+          <input type="text" name="linkedIn" id="linkedIn" placeholder="LinkedIn link" onChange={handleInfoChange}/>
+          <input type="text" name="otherLink" id="otherLink" placeholder="Any relevant links?" onChange={handleInfoChange}/>
         </form>
       </>
     }

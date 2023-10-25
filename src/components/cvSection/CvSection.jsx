@@ -4,10 +4,10 @@ import ExperienceCV from "./cv/ExperienceCV";
 import PropTypes from "prop-types";
 import "./../../styles/cvSection.css";
 
-function CvSection(info) {
+function CvSection({ info }) {
 
   CvSection.PropTypes = {
-    info: PropTypes.object.isRequired
+    info: PropTypes.object.isRequired,
   }
   
   return(

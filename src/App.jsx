@@ -5,10 +5,12 @@ import './App.css'
 
 function App() {
 
-  const [info, setInfo] = useState({personal: null, education: null, experience: null})
+  const [info, setInfo] = useState(infoObj)
 
-  const handleInfoChange = () => {
-    setInfo({})
+  const handleInfoChange = (e) => {
+    const { key } = e.target.dataset;
+
+    setInfo({...info, [key]: e.target.value });
   }
 
   return (
@@ -18,6 +20,29 @@ function App() {
     </div>
   )
 
+}
+
+const infoObj = {
+  personal: {
+    name: "Mario Bros",
+    mail: "mariobrothers@gmail.com",
+    tel: "2222459422",
+    location: "New York",
+    links: "mariobros@github.com"
+  },
+  education: {
+    schoolName: "Harvard",
+    degree: "Engineer",
+    location: "Unite States",
+    date: "24/07/2023"
+  },
+  experience: {
+    companyProject: "Mindset",
+    role: "developer",
+    description: "Front-End dev makin the crazyiest wuupididao pages",
+    location: "Mexcio",
+    date: "Today",
+  }
 }
 
 export default App
