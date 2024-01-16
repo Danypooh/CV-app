@@ -1,0 +1,9 @@
+#infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    justify-content: center;
+  }
